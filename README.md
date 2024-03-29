@@ -1,4 +1,4 @@
-# React Feedback App
+# React Feedback App With Tailwind CSS
 
 It allows users to add, update and delete feedback. It uses a mock REST api with json-server.
 
