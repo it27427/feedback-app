@@ -1,0 +1,68 @@
+:root {
+  --inputborder: #ccc;
+  --btnprimarybg: #202142;
+  --btnsecondarybg: rgb(14 165 233);
+  --textdark: #333;
+  --white: #fff;
+}
+
+.inputgroup {
+  display: flex;
+  flex-direction: row;
+  border: .0625rem solid var(--inputborder);
+  padding: .5rem .625rem;
+  border-radius: .5rem;
+}
+
+.inputgroup .inputfield {
+  flex-grow: 2;
+  border: none;
+  font-size: 1rem;
+}
+
+.inputgroup .inputfield:focus {
+  outline: none;
+}
+
+.btn {
+  color: var(--white);
+  border: 0;
+  border-radius: .5rem;
+  width: 6.25rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--btnprimarybg);
+}
+
+.btn-secondary {
+  background: var(--btnsecondarybg);
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  background-color: var(--inputborder);
+  color: var(--textdark);
+  cursor: auto;
+}
+
+.btn:disabled:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.close,
+.edit {
+  position: absolute;
+  top: .625rem;
+  right: 1.25rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
