@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Card from './ui/Card';
+import Button from './ui/Button';
 
 const FeedbackForm = () => {
   const [text, setText] = useState('');
@@ -23,9 +24,7 @@ const FeedbackForm = () => {
             onChange={handleTextChange}
             value={text}
           />
-          <button className='btn btn-secondary' type='submit'>
-            Submit
-          </button>
+          <Button type='submit'>Submit</Button>
         </div>
       </form>
     </Card>
