@@ -4,7 +4,7 @@ import Logo from '../assets/images/logo.svg';
 
 const Header = ({ text }) => {
   return (
-    <header className='bg-sky-900 py-3'>
+    <header className='bg-slate-800 py-3'>
       <div className='container'>
         <div className='flex items-center'>
           <img src={Logo} width={36} alt='Brand-Logo' className='mr-2' />
