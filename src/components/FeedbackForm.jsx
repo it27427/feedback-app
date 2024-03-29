@@ -4,8 +4,21 @@ import Button from './ui/Button';
 
 const FeedbackForm = () => {
   const [text, setText] = useState('');
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleTextChange = (e) => {
+    if (text === '') {
+      setBtnDisabled(true);
+      setErrorMessage(null);
+    } else if (text !== '' && text.trim().length <= 10) {
+      setBtnDisabled(true);
+      setErrorMessage('Text must be at least 10 characters');
+    } else {
+      setBtnDisabled(false);
+      setErrorMessage(null);
+    }
+
     setText(e.target.value);
   };
 
@@ -15,7 +28,7 @@ const FeedbackForm = () => {
         <h2 className='font-bold text-center mb-3'>
           How would you rate your service with us?
         </h2>
-        {/* TODO RATING-SELECT COMPONENT */}
+        {/* TODO => RATING-SELECT COMPONENT */}
         <div className='inputgroup'>
           <input
             type='text'
@@ -24,8 +37,13 @@ const FeedbackForm = () => {
             onChange={handleTextChange}
             value={text}
           />
-          <Button type='submit'>Submit</Button>
+          <Button type='submit' isDisabled={btnDisabled}>
+            Submit
+          </Button>
         </div>
+        {errorMessage && (
+          <p className='message text-sm text-red-600 mt-2'>{errorMessage}</p>
+        )}
       </form>
     </Card>
   );
