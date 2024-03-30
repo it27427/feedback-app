@@ -4,11 +4,11 @@ import Logo from '../assets/images/logo.svg';
 
 const Header = ({ text }) => {
   return (
-    <header className='bg-slate-800 py-3'>
+    <header className='sticky top-0 z-10 bg-slate-800 py-3'>
       <div className='container'>
         <div className='flex items-center'>
           <img src={Logo} width={36} alt='Brand-Logo' className='mr-2' />
-          <h1 className='text-white font-bold uppercase'>{text}</h1>
+          <h1 className='text-sky-400 font-bold uppercase'>{text}</h1>
         </div>
       </div>
     </header>

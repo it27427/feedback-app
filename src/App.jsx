@@ -19,7 +19,7 @@ function App() {
     <>
       <Header />
 
-      <div className='container py-4'>
+      <div className='container pt-4 pb-16'>
         <FeedbackForm />
         <FeedbackStats feedback={feedback} />
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
