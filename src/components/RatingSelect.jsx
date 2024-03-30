@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
-const RatingSelect = () => {
+const RatingSelect = ({ select }) => {
   const [selected, setSelected] = useState(10);
 
-  const handleChange = (params) => {
-    console.log('changed');
+  const handleChange = (e) => {
+    setSelected(+e.currentTarget.value);
+    select(+e.currentTarget.value);
   };
 
   return (
@@ -14,6 +15,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num1'
+          value='1'
           onChange={handleChange}
           checked={selected === 1}
           hidden
@@ -25,6 +27,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num2'
+          value='2'
           onChange={handleChange}
           checked={selected === 2}
           hidden
@@ -36,6 +39,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num3'
+          value='3'
           onChange={handleChange}
           checked={selected === 3}
           hidden
@@ -47,6 +51,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num4'
+          value='4'
           onChange={handleChange}
           checked={selected === 4}
           hidden
@@ -58,6 +63,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num5'
+          value='5'
           onChange={handleChange}
           checked={selected === 5}
           hidden
@@ -69,6 +75,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num6'
+          value='6'
           onChange={handleChange}
           checked={selected === 6}
           hidden
@@ -80,6 +87,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num7'
+          value='7'
           onChange={handleChange}
           checked={selected === 7}
           hidden
@@ -91,6 +99,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num8'
+          value='8'
           onChange={handleChange}
           checked={selected === 8}
           hidden
@@ -102,6 +111,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num9'
+          value='9'
           onChange={handleChange}
           checked={selected === 9}
           hidden
@@ -113,6 +123,7 @@ const RatingSelect = () => {
           type='radio'
           name='rating'
           id='num10'
+          value='10'
           onChange={handleChange}
           checked={selected === 10}
           hidden
