@@ -10,6 +10,8 @@ import AboutIconLink from '@/components/AboutIconLink';
 
 import FeedbackData from '@/data/FeedbackData';
 
+import { FeedbackProvider } from '@/context/FeedbackContext';
+
 import AboutPage from '@/pages/AboutPage';
 
 function App() {
@@ -27,32 +29,34 @@ function App() {
   };
 
   return (
-    <Router>
-      <Header />
+    <FeedbackProvider>
+      <Router>
+        <Header />
 
-      <div className='container pt-4'>
-        <Routes>
-          <Route
-            exact
-            path='/'
-            element={
-              <>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedback}
-                />
-              </>
-            }
-          ></Route>
+        <div className='container pt-4'>
+          <Routes>
+            <Route
+              exact
+              path='/'
+              element={
+                <>
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />
+                  <FeedbackList
+                    feedback={feedback}
+                    handleDelete={deleteFeedback}
+                  />
+                </>
+              }
+            ></Route>
 
-          <Route path='/about' element={<AboutPage />} />
-        </Routes>
-      </div>
+            <Route path='/about' element={<AboutPage />} />
+          </Routes>
+        </div>
 
-      <AboutIconLink />
-    </Router>
+        <AboutIconLink />
+      </Router>
+    </FeedbackProvider>
   );
 }
 
