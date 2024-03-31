@@ -30,7 +30,7 @@ function App() {
     <Router>
       <Header />
 
-      <div className='container pt-4 pb-16'>
+      <div className='container pt-4'>
         <Routes>
           <Route
             exact
@@ -49,9 +49,9 @@ function App() {
 
           <Route path='/about' element={<AboutPage />} />
         </Routes>
-
-        <AboutIconLink />
       </div>
+
+      <AboutIconLink />
     </Router>
   );
 }
