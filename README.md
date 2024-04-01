@@ -30,3 +30,5 @@ npm run dev
 ```
 
 This will run JSON-server on port :5000 and React on port :3000
+
+[Live link](https://cerulean-klepon-98a7c4.netlify.app/)
