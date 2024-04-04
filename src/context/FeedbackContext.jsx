@@ -17,7 +17,7 @@ export const FeedbackProvider = ({ children }) => {
 
   // FETCH-FEEDBACK
   const fetchFeedback = async () => {
-    const response = await fetch(`/api/feedback`);
+    const response = await fetch(`/api/feedback?_sort=id&_order=`);
     const data = await response.json();
     setFeedback(data);
     setIsLoading(false);
@@ -91,5 +91,3 @@ export const FeedbackProvider = ({ children }) => {
 };
 
 export default FeedbackContext;
-
-/* "start": "concurrently \"npm run server\" \"npm run dev\"" */
