@@ -33,14 +33,6 @@ const FeedbackList = () => {
       </AnimatePresence>
     </div>
   );
-
-  // return (
-  //   <div className='flex flex-col gap-8 pt-8 px-4'>
-  //     {feedback.map((item) => (
-  //       <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
-  //     ))}
-  //   </div>
-  // );
 };
 
 export default FeedbackList;
